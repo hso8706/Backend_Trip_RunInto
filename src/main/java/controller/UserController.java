@@ -1,8 +1,8 @@
 package controller;
 
-import sample.model.service.UserService;
-import sample.model.service.UserServiceImpl;
-import sample.vo.User;
+import service.UserService;
+import service.UserServiceImpl;
+import vo.User;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

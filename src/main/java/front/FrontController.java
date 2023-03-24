@@ -19,7 +19,7 @@ public class FrontController extends HttpServlet {
     }
     private void process(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String reqString = request.getServletPath();
-        if (reqString.equals("/list")) {
+        if (reqString.equals("/")) {
             pcon.list(request, response);
         } else if (reqString.equals("/read")) {
             pcon.read(request, response);
