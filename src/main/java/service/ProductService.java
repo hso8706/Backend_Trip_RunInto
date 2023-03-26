@@ -1,6 +1,6 @@
 package service;
 
-import sample.vo.Product;
+import vo.Product;
 
 import java.util.ArrayList;
 

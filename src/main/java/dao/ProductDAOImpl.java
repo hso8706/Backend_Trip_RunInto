@@ -1,7 +1,7 @@
 package dao;
 
-import sample.util.DBUtil;
-import sample.vo.Product;
+import util.DBUtil;
+import vo.Product;
 
 import java.sql.*;
 import java.util.ArrayList;

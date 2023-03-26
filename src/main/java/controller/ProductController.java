@@ -1,8 +1,8 @@
 package controller;
 
-import sample.model.service.ProductService;
-import sample.model.service.ProductServiceImpl;
-import sample.vo.Product;
+import service.ProductService;
+import service.ProductServiceImpl;
+import vo.Product;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

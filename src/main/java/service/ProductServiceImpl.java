@@ -1,8 +1,8 @@
 package service;
 
-import sample.model.dao.ProductDAO;
-import sample.model.dao.ProductDAOImpl;
-import sample.vo.Product;
+import dao.ProductDAO;
+import dao.ProductDAOImpl;
+import vo.Product;
 
 import java.util.ArrayList;
 

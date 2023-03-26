@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="run_into_backend" />
+        <module name="s914_backend_trip_leeyeun_hajungho_leechelim" />
       </profile>
     </annotationProcessing>
   </component>

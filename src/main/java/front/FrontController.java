@@ -1,7 +1,7 @@
 package front;
 
-import sample.controller.ProductController;
-import sample.controller.UserController;
+import controller.CategoryController;
+import controller.ProductController;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,31 +12,28 @@ import java.io.IOException;
 @WebServlet("/")
 public class FrontController extends HttpServlet {
     ProductController pcon;
-    UserController ucon;
+    CategoryController ccon;
+
     public FrontController() {
         pcon = new ProductController();
-        ucon = new UserController();
+        ccon = new CategoryController();
     }
+
     private void process(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        request.setCharacterEncoding("utf-8");
         String reqString = request.getServletPath();
+//대충 위치는 찾았으니 내부 구현부터 해놓고 나중에 해결하자
+        System.out.println("home1: " + request.getParameter("temp"));
+        System.out.println(reqString);
         if (reqString.equals("/")) {
-            pcon.list(request, response);
-        } else if (reqString.equals("/read")) {
+//            System.out.println("home: " + request.getParameter("temp"));
+        } else if (reqString.equals("/locations")) {
             pcon.read(request, response);
-        } else if (reqString.equals("/registForm")) {
-            pcon.registForm(request, response);
-        } else if (reqString.equals("/regist")) {
-            pcon.regist(request, response);
-        } else if (reqString.equals("/delete")) {
-            pcon.delete(request, response);
-        } else if (reqString.equals("/loginForm")) {
-            ucon.loginForm(request, response);
-        } else if (reqString.equals("/loginProcess")) {
-            ucon.loginProcess(request, response);
-        } else if (reqString.equals("/logout")) {
-            ucon.logout(request, response);
+        } else if (reqString.equals("/category")) {
+            ccon.read(request, response);
         }
     }
+
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
             process(request, response);
@@ -44,6 +41,7 @@ public class FrontController extends HttpServlet {
             throw new RuntimeException(e);
         }
     }
+
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
             process(request, response);
