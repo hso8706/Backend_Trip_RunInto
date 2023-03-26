@@ -2,7 +2,6 @@ package dao;
 
 import util.DBUtil;
 import vo.AttractionInfo;
-import vo.Product;
 
 import java.sql.*;
 import java.util.ArrayList;

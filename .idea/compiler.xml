@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Backend_Trip_RunInto" />
         <module name="run_into_backend" />
         <module name="s914_backend_trip_leeyeun_hajungho_leechelim" />
       </profile>

@@ -10,9 +10,9 @@
 <body>
 <div>div1</div>
 <div>
-    <jsp:include page="views/F02-03.jsp"/>
-    <a href="category?categoryNum=12">관광지</a>
-    <jsp:include page="views/triplist.jsp"/>
+<%--    <jsp:include page="views/F02-03.jsp"/>--%>
+    <a href="category">관광지</a>
+<%--    <jsp:include page="views/triplist.jsp"/>--%>
 </div>
 </body>
 </html>

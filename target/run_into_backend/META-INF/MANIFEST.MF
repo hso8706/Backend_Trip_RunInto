@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
-Built-By: ggk14
-Build-Jdk: 11.0.18
+Built-By: 하정호
+Build-Jdk: Azul Zulu version 11.0.16
 
