@@ -33,7 +33,6 @@ public class CategoryController {
 
         Pagination pagination = new Pagination(pgno, word, content_type_id);
 
-
         //pagination
         if(content_type_id != null && !content_type_id.equals("0")) {
             if(word != null && word.length() != 0) word = URLEncoder.encode(word, "utf-8");
@@ -42,6 +41,7 @@ public class CategoryController {
             list = cservice.searchCategory(pagination);
         }
         else list = cservice.selectCategory(content_type_id);
+//        request.setAttribute("pgNum", pgno);
         request.setAttribute("clist", list);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/views/category.jsp"); // home 화면 경로 입력할 것.

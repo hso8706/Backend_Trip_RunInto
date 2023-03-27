@@ -54,8 +54,7 @@
         <tr>
             <th>사진</th>
             <th>명칭</th>
-            <th>유형</th>
-            <th>위치</th>
+<%--            <th>유형</th>--%>
             <th>상세 주소</th>
             <th>자세히 보기</th>
         </tr>
@@ -63,7 +62,7 @@
         <tbody>
         <c:forEach items="${clist}" var="category">
             <tr>
-                <td><img src="${category.firstImage}" class="img-fluid" alt="등록된 사진이 없습니다."></td>
+                <td><img src="${category.firstImage}" width="100px" alt="등록된 사진이 없습니다."></td>
                 <td><a href="category_details?content_id=${category.contentId}">${category.title}</a></td>
                 <c:choose>
                     <c:when test="${category.contentTypeId=='12'}">
@@ -94,7 +93,7 @@
                         <td>잘못된 입력입니다.</td>
                     </c:otherwise>
                 </c:choose>
-                <td>${category.sidoCode} ${category.gugunCode}</td>
+<%--                <td>${category.sidoCode} ${category.gugunCode}</td>--%>
                 <td>${category.addr1}</td>
                 <td><a href="category_details?content_id=${category.contentId}">자세히 보기</a></td>
             </tr>
